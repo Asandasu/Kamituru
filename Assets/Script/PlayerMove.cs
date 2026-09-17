@@ -1,22 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField]private PlayerInput controllerInput;
-    Rigidbody2D playerRigid;
+    [SerializeField] private PlayerInput controllerInput;
+    private Rigidbody2D playerRigid;
 
-    [SerializeField]private float speedX = 3;
-    // Start is called before the first frame update
+    [SerializeField] private float speedX = 3;
+    [SerializeField] private float jumpPower = 5;
+    [SerializeField] private int jumpCount = 2;
+
+    private int currentJumpCount;
     void Start()
     {
         playerRigid = GetComponent<Rigidbody2D>();
+        currentJumpCount = jumpCount;
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        // ジャンプ
+        if (controllerInput.jump && currentJumpCount > 0)
+        {
+            playerRigid.velocity = new Vector2(playerRigid.velocity.x,jumpPower);
+
+            currentJumpCount--;
+        }
+    }
+
     void FixedUpdate()
     {
-        playerRigid.velocity = new Vector2(controllerInput.moveX * speedX, 0);
+        // 左右移動
+        playerRigid.velocity = new Vector2(controllerInput.moveX * speedX,playerRigid.velocity.y);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Ground"))
+            return;
+
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.5f)
+            {
+                currentJumpCount = jumpCount;
+                break;
+            }
+        }
     }
 }

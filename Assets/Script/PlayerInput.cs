@@ -6,6 +6,8 @@ public class PlayerInput : MonoBehaviour
 {
     public float moveX;
     public float moveY;
+
+    public bool jump;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +19,7 @@ public class PlayerInput : MonoBehaviour
     {
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
+
+        jump = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W);
     }
 }
