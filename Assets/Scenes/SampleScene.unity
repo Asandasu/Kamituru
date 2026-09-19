@@ -154,6 +154,7 @@ MonoBehaviour:
   moveX: 0
   moveY: 0
   jump: 0
+  attack: 0
 --- !u!4 &124715628
 Transform:
   m_ObjectHideFlags: 0
@@ -327,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &535067982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -414,6 +415,7 @@ GameObject:
   - component: {fileID: 912244635}
   - component: {fileID: 912244634}
   - component: {fileID: 912244638}
+  - component: {fileID: 912244640}
   - component: {fileID: 912244639}
   m_Layer: 0
   m_Name: Player
@@ -564,8 +566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerInput: {fileID: 124715627}
-  speedX: 5
-  jumpPower: 8
+  speedX: 8
+  attackSpeed: 16
+  jumpPower: 6
   jumpCount: 2
 --- !u!95 &912244639
 Animator:
@@ -588,6 +591,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &912244640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912244633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5af89ce8b11da41b41495db7ff3388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerInput: {fileID: 124715627}
 --- !u!1 &1030484524
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1030484525
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -826,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1938902926
 BoxCollider2D:
   m_ObjectHideFlags: 0

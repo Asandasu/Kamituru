@@ -4,8 +4,12 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private PlayerInput controllerInput;
     private Rigidbody2D playerRigid;
+    private Animator animator;
+
 
     [SerializeField] private float speedX = 3;
+    [SerializeField] private float attackSpeed = 5;
+
     [SerializeField] private float jumpPower = 5;
     [SerializeField] private int jumpCount = 2;
 
@@ -13,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         playerRigid = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         currentJumpCount = jumpCount;
     }
 
@@ -29,8 +34,16 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        // 左右移動
-        playerRigid.velocity = new Vector2(controllerInput.moveX * speedX,playerRigid.velocity.y);
+        // 現在再生されているアニメーションを取得
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+        // Attackアニメーション中か
+        bool isAttacking = stateInfo.IsName("MitihimeDashAttack_Clip");
+
+        // 攻撃中だけ速度アップ
+        float currentSpeed = isAttacking ? attackSpeed : speedX;
+
+        playerRigid.velocity = new Vector2(controllerInput.moveX * currentSpeed,playerRigid.velocity.y);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
