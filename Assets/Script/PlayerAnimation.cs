@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private PlayerInput controllerInput;
+    [SerializeField] private Transform attackHitbox;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D playerRigid;
+
+    private float hitboxPositionX;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,9 @@ public class PlayerAnimation : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerRigid = GetComponent<Rigidbody2D>();
+
+        // 最初のHitBoxのX座標を保存
+        hitboxPositionX = Mathf.Abs(attackHitbox.localPosition.x);
     }
 
     // Update is called once per frame
@@ -37,17 +42,23 @@ public class PlayerAnimation : MonoBehaviour
 
         // 攻撃
         if (controllerInput.attack) 
-        { 
+        {
             animator.SetTrigger("attack");
         }
 
         if (controllerInput.moveX > 0)
         {
             spriteRenderer.flipX = false;
+
+            // 右側にHitBox
+            attackHitbox.localPosition = new Vector3( hitboxPositionX, attackHitbox.localPosition.y, attackHitbox.localPosition.z );
         }
         else if(controllerInput.moveX < 0)
         {
             spriteRenderer.flipX = true;
+
+            // 左側にHitBox
+            attackHitbox.localPosition = new Vector3( -hitboxPositionX, attackHitbox.localPosition.y, attackHitbox.localPosition.z );
         }
     }
 }
