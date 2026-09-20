@@ -122,67 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &66985864
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.776565
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.8162721
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_Name
-      value: HitodamaEnemy (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3758216497353138545, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
 --- !u!1 &72738469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1330,7 @@ MonoBehaviour:
   moveY: 0
   jump: 0
   attack: 0
+  bloodFire: 0
 --- !u!4 &124715628
 Transform:
   m_ObjectHideFlags: 0
@@ -1406,128 +1346,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &320295076
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.1039686
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.2174673
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_Name
-      value: HitodamaEnemy (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3758216497353138545, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
---- !u!1001 &420426480
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.642419
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.1584764
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_Name
-      value: HitodamaEnemy (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3758216497353138545, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,78 +1578,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &544452424 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-  m_PrefabInstance: {fileID: 7983412942146903724}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &544452429
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544452424}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 1.1388273
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &544452430
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544452424}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.4
 --- !u!4 &912244637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1551742173111635326, guid: 11acc428891264f4b88b1a42d9304788, type: 3}
   m_PrefabInstance: {fileID: 2941431943536409372}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &921169797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.53747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.472588
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Name
+      value: HitodamaEnemy (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
 --- !u!1 &1030484524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,7 +1731,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1087754610
+--- !u!1001 &1193684377
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1933,11 +1741,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2175993
+      value: -8.032494
       objectReference: {fileID: 0}
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.766174
+      value: 1.4356608
       objectReference: {fileID: 0}
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1973,18 +1781,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_Name
-      value: HitodamaEnemy (6)
+      value: HitodamaEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3758216497353138545, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_IsTrigger
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175120040694925607, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: hp
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
---- !u!1001 &1197139066
+--- !u!1001 &1441514078
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1994,11 +1814,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1186986
+      value: 9.54
       objectReference: {fileID: 0}
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.851709
+      value: 5.19
       objectReference: {fileID: 0}
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2034,11 +1854,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_Name
-      value: HitodamaEnemy (5)
+      value: HitodamaEnemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3758216497353138545, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_IsTrigger
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4047978
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175120040694925607, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: hp
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2090,7 +1922,7 @@ Transform:
   - {fileID: 72738470}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1919075807
+--- !u!1001 &1817731713
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2100,11 +1932,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0478909
+      value: 0.7126961
       objectReference: {fileID: 0}
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.881248
+      value: 10.374329
       objectReference: {fileID: 0}
     - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2140,11 +1972,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
       propertyPath: m_Name
-      value: HitodamaEnemy (7)
+      value: HitodamaEnemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 3758216497353138545, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_IsTrigger
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542376115945096904, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9478984
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175120040694925607, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
+      propertyPath: hp
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2242,67 +2086,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2099724339
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.6571493
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.9401604
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_Name
-      value: HitodamaEnemy (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3758216497353138545, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
 --- !u!1001 &2941431943536409372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2351,6 +2134,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2315604451994676742, guid: 11acc428891264f4b88b1a42d9304788, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 124715627}
     - target: {fileID: 2497663941554349446, guid: 11acc428891264f4b88b1a42d9304788, type: 3}
       propertyPath: controllerInput
       value: 
@@ -2372,73 +2159,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11acc428891264f4b88b1a42d9304788, type: 3}
---- !u!1001 &7983412942146903724
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.239466
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.6022315
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435128029462341921, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_Name
-      value: HitodamaEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 544452430}
-    - targetCorrespondingSourceObject: {fileID: 2163807930792051012, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 544452429}
-  m_SourcePrefab: {fileID: 100100000, guid: 6e8f7f0cc9473174aae1414d9a58ddd4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2450,11 +2170,7 @@ SceneRoots:
   - {fileID: 535067984}
   - {fileID: 1938902928}
   - {fileID: 1670153428}
-  - {fileID: 7983412942146903724}
-  - {fileID: 66985864}
-  - {fileID: 320295076}
-  - {fileID: 2099724339}
-  - {fileID: 420426480}
-  - {fileID: 1197139066}
-  - {fileID: 1087754610}
-  - {fileID: 1919075807}
+  - {fileID: 1193684377}
+  - {fileID: 1441514078}
+  - {fileID: 921169797}
+  - {fileID: 1817731713}

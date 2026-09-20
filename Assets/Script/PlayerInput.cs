@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
 
     public bool jump;
     public bool attack;
+    public bool bloodFire;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,6 @@ public class PlayerInput : MonoBehaviour
 
         jump = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W);
         attack = Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.V);
+        bloodFire = Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C);
     }
 }

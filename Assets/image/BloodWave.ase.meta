@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3246763f30cf0f648971735b5bc5be91
+guid: 7610b97f423f843408a1da0aa8f96e25
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639254984574816822
+  platformSettingsDirtyTick: 639255301905221425
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: MitihimeFall_Frame_0
+  - name: BloodWave_Frame_0
     originalName: 
-    pivot: {x: 0.52459013, y: 0.5}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 61
-      height: 64
-    spriteID: 192c6f84d64b27d4a8e04f817e231748
+      x: 76
+      y: 51
+      width: 32
+      height: 32
+    spriteID: 3c053277da8970a4da5c591b60781e98
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,39 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-  - name: MitihimeFall_Frame_1
+    uvTransform: {x: 76, y: 51}
+  - name: BloodWave_Frame_1
     originalName: 
-    pivot: {x: 0.49122807, y: 0.5}
+    pivot: {x: 0.5, y: 0.4871795}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 4
+      width: 38
+      height: 39
+    spriteID: b38c0890095d0b04e91caf47e964ea3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 4}
+  - name: BloodWave_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 76
-      width: 57
-      height: 64
-    spriteID: fd11e5240df00eb44a2970d744cf0565
+      width: 48
+      height: 48
+    spriteID: d3fd1b991c5e9b74bb9c20b9d80b0026
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,33 +181,71 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 76}
+  - name: BloodWave_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 64
+      height: 64
+    spriteID: 1fef79618b7affc499a437e34067b279
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1333833339
-    name: MitihimeFall
+    guid: -1446474449
+    name: BloodWave
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: MitihimeFall_Frame_0
+    - name: BloodWave_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 16
+        width: 32
+        height: 32
+      spriteId: 3c053277da8970a4da5c591b60781e98
+    - name: BloodWave_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 13
+        y: 13
+        width: 38
+        height: 39
+      spriteId: b38c0890095d0b04e91caf47e964ea3c
+    - name: BloodWave_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 8
+        y: 8
+        width: 48
+        height: 48
+      spriteId: d3fd1b991c5e9b74bb9c20b9d80b0026
+    - name: BloodWave_Frame_3
+      frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 61
+        width: 64
         height: 64
-      spriteId: 192c6f84d64b27d4a8e04f817e231748
-    - name: MitihimeFall_Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 4
-        y: 0
-        width: 57
-        height: 64
-      spriteId: fd11e5240df00eb44a2970d744cf0565
+      spriteId: 1fef79618b7affc499a437e34067b279
     linkedCells: []
     parentIndex: -1
   platformSettings:

@@ -98,6 +98,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.17
+    functionName: WaveShot
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: abf92b19462ee6649be3cfbd59747a0f, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.42
     functionName: AttackEnd
     data: 

@@ -9,6 +9,7 @@ public class BloodBlade : MonoBehaviour
 
     private float direction = 1f;
 
+    [SerializeField] private bool isDestroy = false;
     void Start()
     {
         Destroy(gameObject, lifeTime);
@@ -46,7 +47,10 @@ public class BloodBlade : MonoBehaviour
                 enemy.TakeDamage(damage);
             }
 
-            Destroy(gameObject);
+            if(isDestroy)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

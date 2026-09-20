@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 74
-      y: 4
+      x: 128
+      y: 75
       width: 48
       height: 55
     spriteID: 2c9742daed07b7b47a9ba6b1f7e039b1
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 74, y: 4}
+    uvTransform: {x: 128, y: 75}
   - name: MitihimeAttackNormal_Frame_1
     originalName: 
     pivot: {x: 0.5084746, y: 0.50793654}
@@ -148,8 +148,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 75
+      x: 74
+      y: 4
       width: 59
       height: 63
     spriteID: 4ee2e539a3fa95a4d90754a26afe8d73
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 75}
+    uvTransform: {x: 74, y: 4}
   - name: MitihimeAttackNormal_Frame_2
     originalName: 
     pivot: {x: 0.516129, y: 0.50793654}
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 146
+      x: 141
+      y: 4
       width: 58
       height: 63
     spriteID: bc6b0b0f485144f41b34795f5adda53b
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 146}
+    uvTransform: {x: 141, y: 4}
   - name: MitihimeAttackNormal_Frame_4
     originalName: 
     pivot: {x: 0.46296296, y: 0.50793654}
@@ -208,8 +208,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 70
-      y: 146
+      x: 4
+      y: 75
       width: 54
       height: 63
     spriteID: f649caf5b03313147aba905be8652ebb
@@ -220,7 +220,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 70, y: 146}
+    uvTransform: {x: 4, y: 75}
+  - name: MitihimeAttackNormal_Frame_5
+    originalName: 
+    pivot: {x: 0.46296296, y: 0.50793654}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 75
+      width: 54
+      height: 63
+    spriteID: 9e59b0b060228e44ab9e83ff43df2054
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 75}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -275,6 +295,15 @@ ScriptedImporter:
         width: 54
         height: 63
       spriteId: f649caf5b03313147aba905be8652ebb
+    - name: MitihimeAttackNormal_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 0
+        width: 54
+        height: 63
+      spriteId: 9e59b0b060228e44ab9e83ff43df2054
     linkedCells: []
     parentIndex: -1
   platformSettings:
