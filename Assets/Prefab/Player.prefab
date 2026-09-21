@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6596601611438449183}
   - component: {fileID: 6611918563796596845}
   - component: {fileID: 2315604451994676742}
+  - component: {fileID: 8695049234307787577}
   m_Layer: 0
   m_Name: BloodFire
   m_TagString: Untagged
@@ -120,8 +121,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 0}
-  duration: 12
+  duration: 9
+  effectPrefab: {fileID: 1331766025821001674, guid: d4408e83a5aa0e74aaea4d122c4fa268, type: 3}
+  effectPoint: {fileID: 1551742173111635326}
+  timeText: {fileID: 0}
   isActive: 0
+--- !u!114 &8695049234307787577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075713977963863990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19afcd3f492012e4cbb48ce8477b5a1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxGauge: 100
+  sprite:
+  - {fileID: 4930497414968062933, guid: e29c4e21121510743ad076fd75988347, type: 3}
+  - {fileID: 8853372140926510535, guid: e29c4e21121510743ad076fd75988347, type: 3}
+  - {fileID: 5703011910779462466, guid: e29c4e21121510743ad076fd75988347, type: 3}
+  - {fileID: -4638917844306148708, guid: e29c4e21121510743ad076fd75988347, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &3144745567803184128
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +161,7 @@ GameObject:
   - component: {fileID: 2497663941554349446}
   - component: {fileID: 4218007943139912495}
   - component: {fileID: 2332538081411551882}
+  - component: {fileID: 3094313550047277350}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -347,6 +371,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3094313550047277350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144745567803184128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b592b48a7ce22564aba7e1abc86504d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
 --- !u!1 &5645323298632735537
 GameObject:
   m_ObjectHideFlags: 0

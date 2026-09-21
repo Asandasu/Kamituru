@@ -69,6 +69,10 @@ public class AttackHitbox : MonoBehaviour
 
             if (enemy != null)
             {
+                if (bloodMode.isActive)
+                {
+                    enemy.TakeDamage(damage);
+                }
                 enemy.TakeDamage(damage);
             }
         }
