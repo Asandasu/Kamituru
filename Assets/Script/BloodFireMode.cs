@@ -32,6 +32,7 @@ public class BloodFireMode : MonoBehaviour
         // L / C を押した瞬間だけ検出
         if (input.bloodFire && !isActive && gauge.IsFull()) 
         {
+            gauge.FireEyeOpen();
             StartCoroutine(BloodFire());
         }
     }
@@ -70,8 +71,7 @@ public class BloodFireMode : MonoBehaviour
         timeText.gameObject.SetActive(false);
 
         gauge.UseGauge(10000);
-        gauge.AddGauge(1);
-        gauge.UseGauge(1);
+        gauge.AddGauge(0);
 
         isActive = false;
     }

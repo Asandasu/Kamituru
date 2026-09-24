@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e29c4e21121510743ad076fd75988347
+guid: ee9df5854db79bb4fad1bbb12892118b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639257058874690501
+  platformSettingsDirtyTick: 639258557663143605
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BloodEyeStat_Frame_0
+  - name: AcidoBullet
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 32
-    spriteID: 615cd3807df37714791d342decbd91b2
+    spriteID: 7ca547edae8fc3347aa0f6bf81134b6c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: BloodEyeStat_Frame_1
+  - name: AcidoBullet_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 9
@@ -151,8 +151,8 @@ ScriptedImporter:
       x: 4
       y: 44
       width: 32
-      height: 32
-    spriteID: 455dea31dff60c143a1842c65da705f1
+      height: 30
+    spriteID: d1403164d66e7a84eaa7081230406d56
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,27 +161,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 44}
-  - name: BloodEyeStat_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 84
-      width: 32
-      height: 32
-    spriteID: 93a31c47675235040862350879ee3c4f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 84}
-  - name: BloodEyeStat_Frame_3
+  - name: AcidoBullet_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 9
@@ -191,8 +171,8 @@ ScriptedImporter:
       x: 44
       y: 4
       width: 32
-      height: 32
-    spriteID: c0f058093b6f2c149ba23980b0bb4140
+      height: 28
+    spriteID: 5207236573cd8f54b9607a89cfc2c9db
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,16 +181,36 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 4}
+  - name: AcidoBullet_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 82
+      width: 32
+      height: 30
+    spriteID: 1375d4de6346fe64b8595e3f3187c5c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 82}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1185554369
-    name: BloodEyeStat
+    guid: 1727756844
+    name: AcidoBullet
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BloodEyeStat_Frame_0
+    - name: AcidoBullet_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -218,34 +218,34 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 32
-      spriteId: 615cd3807df37714791d342decbd91b2
-    - name: BloodEyeStat_Frame_1
+      spriteId: 7ca547edae8fc3347aa0f6bf81134b6c
+    - name: AcidoBullet_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
+        y: 1
         width: 32
-        height: 32
-      spriteId: 455dea31dff60c143a1842c65da705f1
-    - name: BloodEyeStat_Frame_2
+        height: 30
+      spriteId: d1403164d66e7a84eaa7081230406d56
+    - name: AcidoBullet_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
+        y: 2
         width: 32
-        height: 32
-      spriteId: 93a31c47675235040862350879ee3c4f
-    - name: BloodEyeStat_Frame_3
+        height: 28
+      spriteId: 5207236573cd8f54b9607a89cfc2c9db
+    - name: AcidoBullet_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
+        y: 1
         width: 32
-        height: 32
-      spriteId: c0f058093b6f2c149ba23980b0bb4140
+        height: 30
+      spriteId: 1375d4de6346fe64b8595e3f3187c5c0
     linkedCells: []
     parentIndex: -1
   platformSettings:

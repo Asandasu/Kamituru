@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e29c4e21121510743ad076fd75988347
+guid: b1106fe66f37e454c9bb979b1e205096
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639257058874690501
+  platformSettingsDirtyTick: 639258483125063584
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,78 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BloodEyeStat_Frame_0
+  - name: AcidoNAttack_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.44, y: 0.5254237}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 4
+      width: 50
+      height: 59
+    spriteID: c0903ce57eadb9643ad8e9c0b3cf9546
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 4}
+  - name: AcidoNAttack_Frame_1
+    originalName: 
+    pivot: {x: 0.45652175, y: 0.5254237}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 71
+      width: 46
+      height: 59
+    spriteID: bac71174415ea4a41aafd9725446703f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 71}
+  - name: AcidoNAttack_Frame_2
+    originalName: 
+    pivot: {x: 0.44, y: 0.5254237}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 71
+      width: 50
+      height: 59
+    spriteID: 81b813a21ca99564c891ecd3ef615022
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 71}
+  - name: AcidoNAttack_Frame_3
+    originalName: 
+    pivot: {x: 0.4509804, y: 0.5254237}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 32
-    spriteID: 615cd3807df37714791d342decbd91b2
+      width: 51
+      height: 59
+    spriteID: 3770c69dce6a5cb4aa5ed82c6d0e904d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +201,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: BloodEyeStat_Frame_1
+  - name: AcidoNAttack_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.44, y: 0.5254237}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 44
-      width: 32
-      height: 32
-    spriteID: 455dea31dff60c143a1842c65da705f1
+      x: 63
+      y: 138
+      width: 50
+      height: 59
+    spriteID: c2997aa831e158c43baa5a13704b3c71
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,39 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
-  - name: BloodEyeStat_Frame_2
+    uvTransform: {x: 63, y: 138}
+  - name: AcidoNAttack_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.44, y: 0.5254237}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 84
-      width: 32
-      height: 32
-    spriteID: 93a31c47675235040862350879ee3c4f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 84}
-  - name: BloodEyeStat_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 44
+      x: 121
       y: 4
-      width: 32
-      height: 32
-    spriteID: c0f058093b6f2c149ba23980b0bb4140
+      width: 50
+      height: 59
+    spriteID: 09ddf3967a3786940815e5c8057c1dc6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,52 +240,128 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 4}
+    uvTransform: {x: 121, y: 4}
+  - name: AcidoNAttack_Frame_6
+    originalName: 
+    pivot: {x: 0.44, y: 0.5166667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 71
+      width: 50
+      height: 60
+    spriteID: 45e4a79d4daa37044b961e4db3bb9a64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 71}
+  - name: AcidoNAttack_Frame_7
+    originalName: 
+    pivot: {x: 0.44, y: 0.5166667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 139
+      width: 50
+      height: 60
+    spriteID: 0d8e69a9d3e5de140ac4734e7e6dd29d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 139}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1185554369
-    name: BloodEyeStat
+    guid: -527801226
+    name: AcidoNAttack
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BloodEyeStat_Frame_0
+    - name: AcidoNAttack_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      spriteId: 615cd3807df37714791d342decbd91b2
-    - name: BloodEyeStat_Frame_1
+        x: 10
+        y: 1
+        width: 50
+        height: 59
+      spriteId: c0903ce57eadb9643ad8e9c0b3cf9546
+    - name: AcidoNAttack_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      spriteId: 455dea31dff60c143a1842c65da705f1
-    - name: BloodEyeStat_Frame_2
+        x: 11
+        y: 1
+        width: 46
+        height: 59
+      spriteId: bac71174415ea4a41aafd9725446703f
+    - name: AcidoNAttack_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      spriteId: 93a31c47675235040862350879ee3c4f
-    - name: BloodEyeStat_Frame_3
+        x: 10
+        y: 1
+        width: 50
+        height: 59
+      spriteId: 81b813a21ca99564c891ecd3ef615022
+    - name: AcidoNAttack_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      spriteId: c0f058093b6f2c149ba23980b0bb4140
+        x: 9
+        y: 1
+        width: 51
+        height: 59
+      spriteId: 3770c69dce6a5cb4aa5ed82c6d0e904d
+    - name: AcidoNAttack_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 10
+        y: 1
+        width: 50
+        height: 59
+      spriteId: c2997aa831e158c43baa5a13704b3c71
+    - name: AcidoNAttack_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 10
+        y: 1
+        width: 50
+        height: 59
+      spriteId: 09ddf3967a3786940815e5c8057c1dc6
+    - name: AcidoNAttack_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 10
+        y: 1
+        width: 50
+        height: 60
+      spriteId: 45e4a79d4daa37044b961e4db3bb9a64
+    - name: AcidoNAttack_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 10
+        y: 1
+        width: 50
+        height: 60
+      spriteId: 0d8e69a9d3e5de140ac4734e7e6dd29d
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -276,4 +392,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 64, y: 64}
