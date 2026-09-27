@@ -145,4 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0e2c1747d129a4cbd781bac51edcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gaugeAmount: 10
+  gaugeAmount: 20

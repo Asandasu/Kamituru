@@ -10,15 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
       propertyPath: m_Name
-      value: AcidoBullet
+      value: AcidoNeedle
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 7225240159292624708, guid: 9fc8d1e3539e613418af3611ab6ae8d6, type: 3}
+    - target: {fileID: 3626916397498700004, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5789052437904718085, guid: 9fc8d1e3539e613418af3611ab6ae8d6, type: 3}
     - target: {fileID: 7878350319992209165, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -60,6 +72,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -70,6 +86,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
       insertIndex: -1
       addedObject: {fileID: -3721734910499145816}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6467365490734715238}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: ee9df5854db79bb4fad1bbb12892118b, type: 3}
 --- !u!1 &721838254057787670 stripped
 GameObject:
@@ -88,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e1b08d8430dca41a5707f9a3e44a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpAmount: 5
+  hpAmount: 10
 --- !u!58 &-3721734910499145816
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -123,4 +142,19 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
+--- !u!114 &6467365490734715238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721838254057787670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b3680a741de9c469a8585c068ddd27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second: 1
+  speed: 6
+  needle: {fileID: 721838254057787670, guid: b85b45410f536324abc937a88010c256, type: 3}

@@ -29,6 +29,8 @@ public class AcidoMove : MonoBehaviour
     [Header("攻撃Trigger")]
     [SerializeField] private string[] attackTriggers;
 
+    [SerializeField] private Conversation conversation;
+
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -40,9 +42,10 @@ public class AcidoMove : MonoBehaviour
     private bool isMoving = true;
 
     private SpriteRenderer sprite;
-
+    private EnemyHP hp;
     void Start()
     {
+        hp = GetComponent<EnemyHP>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
@@ -54,6 +57,11 @@ public class AcidoMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (conversation.isConversation)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
         if (!isMoving) { rb.velocity = Vector2.zero; return; }
         timer += Time.fixedDeltaTime;
         // 1回分の移動が終了
@@ -103,8 +111,17 @@ public class AcidoMove : MonoBehaviour
             return;
         }
 
+        int attackIndex;
         // ランダムに攻撃を選択
-        int attackIndex = Random.Range(0, attackTriggers.Length);
+        if (hp.CurrentHP > hp.maxHP / 2)
+        {
+            attackIndex = Random.Range(0, attackTriggers.Length - 2);
+        }
+        else
+        {
+            attackIndex = Random.Range(0, attackTriggers.Length);
+        }
+            
         string attackTrigger = attackTriggers[attackIndex];
 
         // 選んだ攻撃を再生

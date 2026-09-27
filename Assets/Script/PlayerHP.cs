@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +10,12 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private Slider hpSlider;
 
     public int CurrentHP { get; private set; }
+    SpriteRenderer sprite;
+    float damageTime = 0.1f;
 
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         CurrentHP = maxHP;
 
         // Sliderの初期設定
@@ -20,6 +25,7 @@ public class PlayerHP : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        StartCoroutine(DamageImage());
         CurrentHP -= damage;
 
         // Sliderを更新
@@ -35,6 +41,7 @@ public class PlayerHP : MonoBehaviour
 
     public void Heal(int amount)
     {
+        StartCoroutine(HealImage());
         CurrentHP += amount;
 
         if (CurrentHP > maxHP)
@@ -49,5 +56,19 @@ public class PlayerHP : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player Dead");
+    }
+
+    private IEnumerator DamageImage()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(damageTime);
+        sprite.color = Color.white;
+    }
+
+    private IEnumerator HealImage()
+    {
+        sprite.color = Color.green;
+        yield return new WaitForSeconds(damageTime);
+        sprite.color = Color.white;
     }
 }

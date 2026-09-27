@@ -12,6 +12,8 @@ public class AcidoBulletBreath : MonoBehaviour
     [SerializeField] private int hpAmount = 10;
     [SerializeField] private float coolTimeSecond = 1.0f;
 
+    [SerializeField] private float shrinkSpeed = 0.2f;
+
     private Transform player;
     private Vector2 direction;
 
@@ -66,8 +68,17 @@ public class AcidoBulletBreath : MonoBehaviour
         }
 
         // 移動だけ行う
-        transform.position +=
-            (Vector3)(direction * speed * Time.deltaTime);
+        transform.position += (Vector3)(direction * speed * Time.deltaTime);
+
+        // 徐々に小さくする
+        transform.localScale -=
+            Vector3.one * shrinkSpeed * Time.deltaTime;
+
+        // 完全に小さくなったら消す
+        if (transform.localScale.x <= 0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

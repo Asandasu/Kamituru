@@ -3,6 +3,7 @@ using UnityEngine;
 public class AcidoAttack : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject fourBullet;
     [SerializeField] private GameObject breath;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private Transform player;
@@ -71,5 +72,38 @@ public class AcidoAttack : MonoBehaviour
         }
         // 弾を生成
         GameObject newBullet = Instantiate(breath, bulletSpawnPoint.position, Quaternion.identity);
+    }
+
+    public void FourShootBullet()
+    {
+        if (player == null)
+        {
+            return;
+        }
+
+        if (bullet == null)
+        {
+            return;
+        }
+
+        // プレイヤーへの方向
+        Vector2 direction =
+            (player.position - bulletSpawnPoint.position).normalized;
+
+        // 弾を生成
+        GameObject newBullet = Instantiate(
+            fourBullet,
+            bulletSpawnPoint.position,
+            Quaternion.identity
+        );
+
+        // Bulletスクリプトを取得
+        AcidoBullet acidoBullet =
+            newBullet.GetComponent<AcidoBullet>();
+
+        if (acidoBullet != null)
+        {
+            acidoBullet.SetDirection(direction, bulletSpeed);
+        }
     }
 }

@@ -13,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpPower = 5;
     [SerializeField] private int jumpCount = 2;
 
+    [SerializeField] private Conversation conversation;
+
     private int currentJumpCount;
     void Start()
     {
@@ -23,6 +25,12 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (conversation.isConversation)
+        {
+            playerRigid.velocity = Vector2.zero;
+            return;
+        }
+
         // ジャンプ
         if (controllerInput.jump && currentJumpCount > 0)
         {
@@ -34,6 +42,12 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (conversation.isConversation)
+        {
+            playerRigid.velocity = Vector2.zero;
+            return;
+        }
+
         // 現在再生されているアニメーションを取得
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
