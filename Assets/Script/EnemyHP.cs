@@ -8,6 +8,8 @@ public class EnemyHP : MonoBehaviour
     public int maxHP;
     [SerializeField] private Slider hpSlider;
     [SerializeField] private GameObject[] items;
+
+    [SerializeField] private TalkEventBox eventer;
     
     SpriteRenderer sprite;
 
@@ -44,6 +46,10 @@ public class EnemyHP : MonoBehaviour
         StartCoroutine(DamageImage());
         if (CurrentHP <= 0)
         {
+            if(eventer)
+            {
+                eventer.AfterBattleEvent();
+            }
             Destroy(gameObject);
         }
 

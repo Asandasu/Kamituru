@@ -31,6 +31,8 @@ public class AcidoMove : MonoBehaviour
 
     [SerializeField] private Conversation conversation;
 
+    [SerializeField] private BossMoveActiver moveActiver;
+
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -57,7 +59,7 @@ public class AcidoMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (conversation.isConversation)
+        if (!moveActiver.isBossMove)
         {
             rb.velocity = Vector2.zero;
             return;

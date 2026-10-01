@@ -9,6 +9,7 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private int maxHP = 100;
     [SerializeField] private Slider hpSlider;
 
+    [SerializeField] private PlayerMoveActiver activer;
     public int CurrentHP { get; private set; }
     SpriteRenderer sprite;
     float damageTime = 0.1f;
@@ -25,6 +26,9 @@ public class PlayerHP : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (!activer.isPlayerMove)
+            return;
+
         StartCoroutine(DamageImage());
         CurrentHP -= damage;
 

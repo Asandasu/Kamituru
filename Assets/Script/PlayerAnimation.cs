@@ -7,6 +7,10 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private PlayerInput controllerInput;
     [SerializeField] private Transform attackHitbox;
 
+    [SerializeField] private Conversation conversation;
+
+    [SerializeField] private PlayerMoveActiver activer;
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D playerRigid;
@@ -27,6 +31,11 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!activer.isPlayerMove)
+        {
+            return;
+        }
+
         // 歩行
         bool isWalking = Mathf.Abs(controllerInput.moveX) > 0.01f;
 
@@ -60,5 +69,16 @@ public class PlayerAnimation : MonoBehaviour
             // 左側にHitBox
             attackHitbox.localPosition = new Vector3( -hitboxPositionX, attackHitbox.localPosition.y, attackHitbox.localPosition.z );
         }
+    }
+
+    public void WaitMode()
+    {
+        animator.SetBool("jump", false);
+        animator.SetBool("fall", false);
+        animator.SetBool("walk", false);
+    }
+    public void WalkMode()
+    {
+        animator.SetBool("walk", true);
     }
 }

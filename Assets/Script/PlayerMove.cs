@@ -15,6 +15,8 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private Conversation conversation;
 
+    [SerializeField] private PlayerMoveActiver activer;
+
     private int currentJumpCount;
     void Start()
     {
@@ -25,16 +27,18 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (conversation.isConversation)
+        if (!activer.isPlayerMove)
         {
-            playerRigid.velocity = Vector2.zero;
             return;
         }
 
-        // ジャンプ
         if (controllerInput.jump && currentJumpCount > 0)
         {
-            playerRigid.velocity = new Vector2(playerRigid.velocity.x,jumpPower);
+            // 横方向の速度を維持してジャンプ
+            playerRigid.velocity = new Vector2(
+                playerRigid.velocity.x,
+                jumpPower
+            );
 
             currentJumpCount--;
         }
@@ -42,9 +46,10 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (conversation.isConversation)
+        // プレイヤー操作が無効なら、
+        // PlayerMoveでは速度を変更しない
+        if (!activer.isPlayerMove)
         {
-            playerRigid.velocity = Vector2.zero;
             return;
         }
 
@@ -60,17 +65,18 @@ public class PlayerMove : MonoBehaviour
         playerRigid.velocity = new Vector2(controllerInput.moveX * currentSpeed,playerRigid.velocity.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag("Ground"))
             return;
 
         foreach (ContactPoint2D contact in collision.contacts)
         {
+            // 上から地面に乗っている
             if (contact.normal.y > 0.5f)
             {
                 currentJumpCount = jumpCount;
-                break;
+                return;
             }
         }
     }

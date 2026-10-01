@@ -144,7 +144,8 @@ MonoBehaviour:
   - {fileID: 8853372140926510535, guid: e29c4e21121510743ad076fd75988347, type: 3}
   - {fileID: 5703011910779462466, guid: e29c4e21121510743ad076fd75988347, type: 3}
   - {fileID: -4638917844306148708, guid: e29c4e21121510743ad076fd75988347, type: 3}
-  spriteRenderer: {fileID: 0}
+  image: {fileID: 0}
+  fireEye: {fileID: 0}
 --- !u!1 &3144745567803184128
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +255,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8d7f71fbeced5fe4fb3e51797ddb1a2c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -317,6 +318,7 @@ MonoBehaviour:
   attackSpeed: 10
   jumpPower: 8
   jumpCount: 2
+  conversation: {fileID: 0}
 --- !u!114 &2497663941554349446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerInput: {fileID: 0}
   attackHitbox: {fileID: 7597606017844300776}
+  conversation: {fileID: 0}
 --- !u!114 &4218007943139912495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
+  hpSlider: {fileID: 0}
 --- !u!1 &5645323298632735537
 GameObject:
   m_ObjectHideFlags: 0

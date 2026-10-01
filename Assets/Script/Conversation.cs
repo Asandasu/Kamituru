@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +14,10 @@ public class Conversation : MonoBehaviour
     [SerializeField] private Image leftCharacter;
     [SerializeField] private Image rightCharacter;
 
+    [SerializeField] private BossMoveActiver moveActiver;
+
+    [SerializeField] private PlayerMoveActiver activer;
+
     [System.Serializable]
     public class Dialogue
     {
@@ -20,14 +26,17 @@ public class Conversation : MonoBehaviour
 
         [Header("左の立ち絵")]
         public Sprite leftSprite;
+        public bool isBlackLeft = false;
 
         [Header("右の立ち絵")]
         public Sprite rightSprite;
+        public bool isBlackRight = false;
     }
 
     [SerializeField] private Dialogue[] dialogues;
     private int currentSentence = 0;
     public bool isConversation { get; private set; }
+    public bool isTalk { get; private set; }
 
     void Start()
     {
@@ -41,7 +50,7 @@ public class Conversation : MonoBehaviour
     }
     void Update()
     {
-        if (isConversation && input.attack)
+        if (isTalk && input.attack)
         {
             NextSentence();
         }
@@ -52,11 +61,7 @@ public class Conversation : MonoBehaviour
         {
             return;
         }
-        isConversation = true;
-        currentSentence = 0;
-        windowPoint.color = new Color(0, 0, 0, 1);
-        windowPoint.sprite = window;
-        ShowDialogue();
+        StartCoroutine(StopGame());
     }
     private void NextSentence()
     {
@@ -80,17 +85,34 @@ public class Conversation : MonoBehaviour
         {
             leftCharacter.sprite = dialogue.leftSprite;
             leftCharacter.enabled = true;
+            if(dialogue.isBlackLeft)
+            {
+                leftCharacter.color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
+            else
+            {
+                leftCharacter.color = new Color(1, 1, 1, 1);
+            }
         }
         else
         {
             leftCharacter.sprite = null;
             leftCharacter.enabled = false;
         }
+
         // 右の立ち絵
         if (dialogue.rightSprite != null)
         {
             rightCharacter.sprite = dialogue.rightSprite;
             rightCharacter.enabled = true;
+            if (dialogue.isBlackRight)
+            {
+                rightCharacter.color = new Color(0.5f, 0.5f, 0.5f, 1);
+            }
+            else
+            {
+                rightCharacter.color = new Color(1, 1, 1, 1);
+            }
         }
         else
         {
@@ -100,12 +122,43 @@ public class Conversation : MonoBehaviour
     }
     private void EndConversation()
     {
-        isConversation = false; dialogueText.text = "";
+        dialogueText.text = "";
         windowPoint.sprite = null;
         windowPoint.color = new Color(0, 0, 0, 0);
         leftCharacter.sprite = null;
         rightCharacter.sprite = null;
         leftCharacter.enabled = false;
         rightCharacter.enabled = false;
+        StartCoroutine(StartGame());
+    }
+
+    private IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(1);
+        isTalk = false;
+        isConversation = false;
+        if (activer)
+        {
+            activer.PlayerMoveActive();
+        }
+        if (moveActiver)
+        {
+            moveActiver.BossMoveActive();
+        }
+    }
+
+    private IEnumerator StopGame()
+    {
+        isConversation = true;
+        if (activer)
+        {
+            activer.PlayerMoveStopper();
+        }
+        yield return new WaitForSeconds(1);
+        isTalk = true;
+        currentSentence = 0;
+        windowPoint.color = new Color(0, 0, 0, 1);
+        windowPoint.sprite = window;
+        ShowDialogue();
     }
 }
