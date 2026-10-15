@@ -13,6 +13,7 @@ public class PlayerHP : MonoBehaviour
     public int CurrentHP { get; private set; }
     SpriteRenderer sprite;
     float damageTime = 0.1f;
+    bool isCoolTime = false;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class PlayerHP : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (!activer.isPlayerMove)
+        if (!activer.isPlayerMove && isCoolTime)
             return;
 
         StartCoroutine(DamageImage());
@@ -64,8 +65,10 @@ public class PlayerHP : MonoBehaviour
 
     private IEnumerator DamageImage()
     {
+        isCoolTime = true;
         sprite.color = Color.red;
         yield return new WaitForSeconds(damageTime);
+        isCoolTime = false;
         sprite.color = Color.white;
     }
 

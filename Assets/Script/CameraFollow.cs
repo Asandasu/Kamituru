@@ -14,6 +14,8 @@ public class CameraFollow : MonoBehaviour
     private CameraMode mode;
     private Vector3 fixedPosition;
 
+    [SerializeField] private float minY = 0;
+
     void LateUpdate()
     {
         if (target == null) return;
@@ -23,19 +25,20 @@ public class CameraFollow : MonoBehaviour
         switch (mode)
         {
             case CameraMode.Follow:
-                targetPosition = new Vector3(target.position.x,target.position.y,transform.position.z);
+                targetPosition = new Vector3(target.position.x, Mathf.Max(target.position.y, minY), transform.position.z);
                 break;
 
             case CameraMode.Horizontal:
-                targetPosition = new Vector3(target.position.x,transform.position.y,transform.position.z);
+                targetPosition = new Vector3(target.position.x, Mathf.Max(target.position.y, minY), transform.position.z);
                 break;
 
             case CameraMode.Fixed:
                 targetPosition = fixedPosition;
+                targetPosition.y = Mathf.Max(targetPosition.y, minY);
                 break;
         }
 
-        transform.position = targetPosition;
+        transform.position = targetPosition; ;
     }
 
     public void SetMode(CameraMode newMode, Vector3 position)
@@ -46,7 +49,7 @@ public class CameraFollow : MonoBehaviour
         {
             fixedPosition = new Vector3(
                 position.x,
-                position.y,
+                Mathf.Max(position.y, minY),
                 transform.position.z
             );
         }
