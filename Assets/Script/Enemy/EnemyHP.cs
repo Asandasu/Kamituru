@@ -10,6 +10,7 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] private GameObject[] items;
 
     [SerializeField] private TalkEventBox eventer;
+    [SerializeField] private BossMoveActiver moveActiver;
     
     SpriteRenderer sprite;
 
@@ -17,6 +18,7 @@ public class EnemyHP : MonoBehaviour
 
     public int CurrentHP { get; private set; }
 
+    GameObject bossSlider;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -27,8 +29,22 @@ public class EnemyHP : MonoBehaviour
             // Sliderの初期設定
             hpSlider.maxValue = maxHP;
             hpSlider.value = CurrentHP;
+            bossSlider = hpSlider.gameObject;
+            if(moveActiver && !moveActiver.isBossMove)
+            {
+                bossSlider.SetActive(false);
+            }
         }
     }
+
+    void Update()
+    {
+        if (moveActiver && moveActiver.isBossMove)
+        {
+            bossSlider.SetActive(true);
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         CurrentHP -= damage;
