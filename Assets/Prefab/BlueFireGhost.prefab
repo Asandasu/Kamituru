@@ -103,11 +103,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686d34ce93a390b47bd82a050954a91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 30
+  maxHP: 10
   hpSlider: {fileID: 0}
   items:
   - {fileID: 5357227357402613550, guid: 1d52912b0783de84fa9e07ee6efa874b, type: 3}
   eventer: {fileID: 0}
+  moveActiver: {fileID: 0}
+  killedEffect: {fileID: 3010801241365204803, guid: 81dbc1dbeb238854aa4e700efbf0f00d, type: 3}
 --- !u!58 &197032434797965576
 CircleCollider2D:
   m_ObjectHideFlags: 0

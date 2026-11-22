@@ -6,6 +6,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private PlayerInput controllerInput;
     [SerializeField] private Transform attackHitbox;
+    [SerializeField] private SpriteRenderer hitboxSprite;
 
     [SerializeField] private Conversation conversation;
 
@@ -61,6 +62,7 @@ public class PlayerAnimation : MonoBehaviour
 
             // 右側にHitBox
             attackHitbox.localPosition = new Vector3( hitboxPositionX, attackHitbox.localPosition.y, attackHitbox.localPosition.z );
+            hitboxSprite.flipX = false;
         }
         else if(controllerInput.moveX < 0)
         {
@@ -68,6 +70,7 @@ public class PlayerAnimation : MonoBehaviour
 
             // 左側にHitBox
             attackHitbox.localPosition = new Vector3( -hitboxPositionX, attackHitbox.localPosition.y, attackHitbox.localPosition.z );
+            hitboxSprite.flipX = true;
         }
     }
 

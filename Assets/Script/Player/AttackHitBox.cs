@@ -5,6 +5,8 @@ public class AttackHitbox : MonoBehaviour
     [SerializeField] private int damage = 10;
 
     [SerializeField]private Collider2D hitbox;
+    [SerializeField] private SpriteRenderer hitboxImage;
+    [SerializeField] private Animator animator;
 
     [SerializeField] private GameObject slashPrefab;
     [SerializeField] private GameObject slashPrefabStrong;
@@ -17,16 +19,20 @@ public class AttackHitbox : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         hitbox.enabled = false;
+        hitboxImage.enabled = false;
     }
 
     public void AttackStart()
     {
         hitbox.enabled = true;
+        hitboxImage.enabled = true;
+        animator.Play("OnoAttack_Clip", 0, 0f);
     }
 
     public void AttackEnd()
     {
         hitbox.enabled = false;
+        hitboxImage.enabled = false;
     }
     public void ShootSlash()
     {
@@ -69,11 +75,14 @@ public class AttackHitbox : MonoBehaviour
 
             if (enemy != null)
             {
+                int finalDamage = damage;
+
                 if (bloodMode.isActive)
                 {
-                    enemy.TakeDamage(damage);
+                    finalDamage *= 2;
                 }
-                enemy.TakeDamage(damage);
+
+                enemy.TakeDamage(finalDamage);
             }
         }
     }

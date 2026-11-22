@@ -11,7 +11,9 @@ public class EnemyHP : MonoBehaviour
 
     [SerializeField] private TalkEventBox eventer;
     [SerializeField] private BossMoveActiver moveActiver;
-    
+
+    [SerializeField] private GameObject killedEffect;
+
     SpriteRenderer sprite;
 
     float damageTime = 0.1f;
@@ -19,6 +21,8 @@ public class EnemyHP : MonoBehaviour
     public int CurrentHP { get; private set; }
 
     GameObject bossSlider;
+
+    private bool isDead = false;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -47,6 +51,9 @@ public class EnemyHP : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isDead)
+            return;
+
         CurrentHP -= damage;
 
         int itemIndex = Random.Range(0, items.Length);
@@ -64,9 +71,16 @@ public class EnemyHP : MonoBehaviour
         {
             if(eventer)
             {
+                // ボス撃破時だけスロー演出
+                TimeManager.Instance.SlowMotion(2f, 0.2f);
+
                 eventer.AfterBattleEvent();
             }
+
+            Instantiate(killedEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+
+            return;
         }
 
         if(hpSlider)

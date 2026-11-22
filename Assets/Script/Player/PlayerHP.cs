@@ -10,6 +10,12 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private Slider hpSlider;
 
     [SerializeField] private PlayerMoveActiver activer;
+
+    [Header("死亡演出")]
+    [SerializeField] private GameObject deathPanelPrefab;
+    [SerializeField] private Transform canvasTransform;
+
+    private bool isDead = false;
     public int CurrentHP { get; private set; }
     SpriteRenderer sprite;
     float damageTime = 0.1f;
@@ -38,6 +44,9 @@ public class PlayerHP : MonoBehaviour
 
         if (CurrentHP <= 0)
         {
+            if (isDead)
+                return;
+
             CurrentHP = 0;
 
             Die();
@@ -60,6 +69,24 @@ public class PlayerHP : MonoBehaviour
 
     private void Die()
     {
+        isDead = true;
+
+        // Canvasの子として死亡演出を生成
+        GameObject panel = Instantiate(
+            deathPanelPrefab,
+            canvasTransform,
+            false
+        );
+
+        // 子オブジェクトのAnimatorを取得
+        Animator animator = panel.GetComponentInChildren<Animator>();
+
+        if (animator != null)
+        {
+            // スローや停止中でもアニメーションを再生
+            animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        }
+
         Debug.Log("Player Dead");
     }
 
