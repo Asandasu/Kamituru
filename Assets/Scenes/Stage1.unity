@@ -167247,6 +167247,10 @@ PrefabInstance:
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 1870366725}
+    - target: {fileID: 3094313550047277350, guid: 11acc428891264f4b88b1a42d9304788, type: 3}
+      propertyPath: canvasTransform
+      value: 
+      objectReference: {fileID: 820069731}
     - target: {fileID: 3144745567803184128, guid: 11acc428891264f4b88b1a42d9304788, type: 3}
       propertyPath: m_Name
       value: Player

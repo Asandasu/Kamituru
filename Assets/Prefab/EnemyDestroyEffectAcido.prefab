@@ -10,12 +10,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: c20a0a93a15130d42b18e378e5a11e07, type: 3}
       propertyPath: m_Name
-      value: EnemyDestroyEffect 1
+      value: EnemyDestroyEffectAcido
       objectReference: {fileID: 0}
     - target: {fileID: 1160356261127867848, guid: c20a0a93a15130d42b18e378e5a11e07, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 32ff8e7f8da7a5849949b755b689957c, type: 2}
+      objectReference: {fileID: 9100000, guid: 7c18e72907dbc4f4395873d46a44c11e, type: 2}
     - target: {fileID: 3626916397498700004, guid: c20a0a93a15130d42b18e378e5a11e07, type: 3}
       propertyPath: m_Sprite
       value: 

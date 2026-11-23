@@ -18,6 +18,10 @@ public class Conversation : MonoBehaviour
 
     [SerializeField] private PlayerMoveActiver activer;
 
+    [SerializeField] private float waitTimeStop = 1f;
+
+    [SerializeField] private float waitTimeStart = 1f;
+
     [System.Serializable]
     public class Dialogue
     {
@@ -134,7 +138,7 @@ public class Conversation : MonoBehaviour
 
     private IEnumerator StartGame()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitTimeStart);
         isTalk = false;
         isConversation = false;
         if (activer)
@@ -154,7 +158,7 @@ public class Conversation : MonoBehaviour
         {
             activer.PlayerMoveStopper();
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitTimeStop);
         isTalk = true;
         currentSentence = 0;
         windowPoint.color = new Color(0, 0, 0, 1);
