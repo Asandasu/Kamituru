@@ -318,6 +318,7 @@ MonoBehaviour:
   attackSpeed: 10
   jumpPower: 8
   jumpCount: 2
+  fallSpeed: 15
   conversation: {fileID: 0}
   activer: {fileID: 0}
 --- !u!114 &2497663941554349446
@@ -464,7 +465,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.7
 --- !u!95 &498920089591693776
 Animator:
   serializedVersion: 5

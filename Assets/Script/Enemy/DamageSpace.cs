@@ -8,8 +8,6 @@ public class DamageSpace : MonoBehaviour
     [SerializeField] private int hpAmount = 10;
     [SerializeField] private float coolTimeSecond = 1.0f;
 
-    [SerializeField] private float shrinkSpeed = 0.2f;
-
     private bool isActive = true;
 
     void Start()

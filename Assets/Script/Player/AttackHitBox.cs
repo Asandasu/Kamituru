@@ -14,6 +14,8 @@ public class AttackHitbox : MonoBehaviour
     [SerializeField] private Transform slashSpawnPoint;
     [SerializeField] private BloodFireMode bloodMode;
 
+    private bool isAttacking = false;
+
     private SpriteRenderer spriteRenderer;
     void Start()
     {
@@ -24,16 +26,24 @@ public class AttackHitbox : MonoBehaviour
 
     public void AttackStart()
     {
+        isAttacking = true;
+
         hitbox.enabled = true;
         hitboxImage.enabled = true;
+        animator.enabled = true;
+
         animator.Play("OnoAttack_Clip", 0, 0f);
     }
 
     public void AttackEnd()
     {
+        isAttacking = false;
+
         hitbox.enabled = false;
         hitboxImage.enabled = false;
+        animator.enabled = false;
     }
+
     public void ShootSlash()
     {
         float direction = spriteRenderer.flipX ? -1f : 1f;
@@ -69,20 +79,16 @@ public class AttackHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isAttacking)
+            return;
+
         if (collision.CompareTag("Enemy"))
         {
             EnemyHP enemy = collision.GetComponent<EnemyHP>();
 
             if (enemy != null)
             {
-                int finalDamage = damage;
-
-                if (bloodMode.isActive)
-                {
-                    finalDamage *= 2;
-                }
-
-                enemy.TakeDamage(finalDamage);
+                enemy.TakeDamage(damage);
             }
         }
     }

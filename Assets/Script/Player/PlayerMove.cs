@@ -13,9 +13,13 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpPower = 5;
     [SerializeField] private int jumpCount = 2;
 
+    [SerializeField] private float fallSpeed = 8f;
+
     [SerializeField] private Conversation conversation;
 
     [SerializeField] private PlayerMoveActiver activer;
+
+    private bool isGrounded = false;
 
     private int currentJumpCount;
     void Start()
@@ -46,23 +50,37 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        // プレイヤー操作が無効なら、
-        // PlayerMoveでは速度を変更しない
+        // 前回の物理判定で接地していたかを保存
+        bool wasGrounded = isGrounded;
+
+        // 次の物理判定に備えてリセット
+        isGrounded = false;
+
         if (!activer.isPlayerMove)
         {
             return;
         }
 
-        // 現在再生されているアニメーションを取得
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        AnimatorStateInfo stateInfo =
+            animator.GetCurrentAnimatorStateInfo(0);
 
-        // Attackアニメーション中か
-        bool isAttacking = stateInfo.IsName("MitihimeDashAttack_Clip");
+        bool isAttacking =
+            stateInfo.IsName("MitihimeDashAttack_Clip");
 
-        // 攻撃中だけ速度アップ
         float currentSpeed = isAttacking ? attackSpeed : speedX;
 
-        playerRigid.velocity = new Vector2(controllerInput.moveX * currentSpeed,playerRigid.velocity.y);
+        Vector2 velocity = playerRigid.velocity;
+
+        // 横移動
+        velocity.x = controllerInput.moveX * currentSpeed;
+
+        // 空中で落下速度の上限を設定
+        if (!wasGrounded)
+        {
+            velocity.y = Mathf.Max(velocity.y, -fallSpeed);
+        }
+
+        playerRigid.velocity = velocity;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -72,10 +90,10 @@ public class PlayerMove : MonoBehaviour
 
         foreach (ContactPoint2D contact in collision.contacts)
         {
-            // 上から地面に乗っている
             if (contact.normal.y > 0.5f)
             {
                 currentJumpCount = jumpCount;
+                isGrounded = true;
                 return;
             }
         }
